@@ -490,6 +490,26 @@ nav{
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+#email {
+    width: 100%;
+    padding: 1vw 0 ;
+    background-color: transparent;
+    border: none;
+    font-family: "neoThin";
+    font-weight: 501;
+    letter-spacing: 1px;
+    outline: none;
+}
+
+#email-div{
+    display: flex;
+    border-bottom: 1px solid #a09f9fd8;
+    align-items: center;
+    z-index: 999;
+}
+#email-div i{
+    color: #bcbaba;
+}
 #nav-menu{
     display: none;
 }
