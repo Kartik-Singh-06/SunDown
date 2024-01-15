@@ -33,6 +33,7 @@ function activeBtn(buttonId){
  buttons.forEach(button =>{
     if (button.id === buttonId) {
         button.style.color = 'white'
+        
     }
     else{
         button.style.color = 'grey'
@@ -44,6 +45,7 @@ function isActive (){
     let initialActiveBtn = buttons[0]
     imgDiv.style.backgroundImage = `url(${initialActiveBtn.dataset.image})`;
     activeBtn(initialActiveBtn.id)
+
 }
 window.onload = isActive;
 
@@ -51,6 +53,7 @@ buttons.forEach(button =>{
     button.addEventListener('click',()=>{
         imgDiv.style.backgroundImage = `url(${button.dataset.image})`;
         activeBtn(button.id);
+    
     });
 });
 
@@ -71,7 +74,6 @@ function navResp(){
     menu.addEventListener("click",()=>{
         if (flag == 0) {        
             screen.style.top = 0
-            
             navImg.style.opacity = 0
             flag = 1
         }
@@ -82,4 +84,13 @@ function navResp(){
         }
     })
 }
+function loader(){
+let loader =  document.querySelector("#loader");
+ setTimeout(()=>{
+    loader.style.top = "-150%"
+ },4000)
+
+}
+
+loader();
 navResp()
